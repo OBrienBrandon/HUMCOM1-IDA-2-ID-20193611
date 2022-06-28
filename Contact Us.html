@@ -23,12 +23,48 @@ ul li a:hover{
       color: #000;
 }
 
+.button {
+        background-color: #1c87c9;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        border: none;
+        color: #eeeeee;
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 25px;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+      }
+      @keyframes glowing {
+        0% {
+          background-color: #000000;
+          box-shadow: 0 0 5px #ffffff;
+        }
+        50% {
+          background-color: #000000;
+          box-shadow: 0 0 20px #ffffff;
+        }
+        100% {
+          background-color: #000000;
+          box-shadow: 0 0 5px #ffffff;
+        }
+      }
+      .button {
+        animation: glowing 1300ms infinite;
+      }
+
+      .btn1{
+   	    margin-right: 50px;
+   	}
+
 #demo {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 5px;
+  height: 40px;
   background-color: rgb(0, 0, 0);
-  padding: 10px 60px;
+  padding: 5px 50px;
   color: white;
 }
 
@@ -190,18 +226,51 @@ body{
     background-position: right top;
     margin-right: 200px;
 }
+
+.column {
+  float: left;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
 </style>
 </head>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <body background="Brandon1.jpg">
 <img src="Logo.png" style="width:20%;height:20%;float:left;">
     <div class="main">
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="Photo.html">Gallery</a></li>
-            <li><a href="Location Map.html">Maps</a></li>
-            <li  class="active"><a href="Contact Us.html">Contact Us</a></li>
-            </ul>
+      <ul>
+        <space class="btn1"><a class="button" href="Finals project.html">Home</a></space>
+          <space  class="btn1"><a class="button" href="Photo.html">Gallery</a></space>
+          <space  class="btn1"><a class="button" href="Location Map.html">Maps</a></space>
+          <space  class="btn1"><a class="button" href="Contact Us.html">Contact Us</a></space>
+      </ul>
 
             <div id="demo">
             </div>
@@ -212,8 +281,15 @@ body{
                 document.getElementById("demo").innerHTML = d.toLocaleTimeString();
                 document.getElementById("demo").style.left = "1100px";
               }
-              </script>     
+              </script>   
 
+<div class="clearfix">
+  <div class="column menu">
+    <a class="button" href ="Parks.html">Parks in Baguio</a><br><br>
+    <a class="button" href ="The Food.html">Foods</a><br><br>
+    <a class="button" href ="Museum.html">Museum</a>
+  </div>
+</div>
        
         <div class="container">
           <div class="contactInfo">
